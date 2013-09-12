@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <conio.h>
 #include <string.h>
+#include <ctype.h>
+#include "menu.h"
 
 char menu (const char mopc[][30], const char *titulo)
 {
@@ -29,5 +31,5 @@ int pediropc(const char mopc[][30], const char *titulo, const char *msj)
     fflush(stdin);
     opc = getchar();
 
-    return opc;
+    return toupper(opc);
 }

@@ -5,16 +5,14 @@
 #include "matematica.h"
 #include "fechas.h"
 #include "matrices.h"
+#include "arreglos.h"
 
 //Tp Programacion
 
 int main()
 {
     char mopc[][30] = {"MAFZQ", "Matematicas", "Arreglos","Fechas","Matrices","Salir"};
-
-    char mopcarr[][30] = {"AEQ","Agregar","Eliminar","Salir"};
-    char mopcfecha[][30] = {"VQ","Validar","Salir"};
-    char opc,opcmat,opcarr,opcfecha; // Variable donde se guarda la opcion elegida
+    char opc; // Variable donde se guarda la opcion elegida
 
     do
     {
@@ -26,7 +24,7 @@ int main()
             matematica();
             break;
         case 'A':
-           // ACA VA LA FUNCION PARA TRABAJAR CON VECTORES !!!!!!!
+            arreglos();
             break;
         case 'F':
             fechas();
