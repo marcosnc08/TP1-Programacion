@@ -32,25 +32,29 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="../Programacion/fechas.c">
+		<Unit filename="arreglos.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="../Programacion/fechas.h" />
-		<Unit filename="../Programacion/main.c">
+		<Unit filename="arreglos.h" />
+		<Unit filename="fechas.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="../Programacion/matematica.c">
+		<Unit filename="fechas.h" />
+		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="../Programacion/matematica.h" />
-		<Unit filename="../Programacion/matrices.c">
+		<Unit filename="matematica.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="../Programacion/matrices.h" />
-		<Unit filename="../Programacion/menu.c">
+		<Unit filename="matematica.h" />
+		<Unit filename="matrices.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="../Programacion/menu.h" />
+		<Unit filename="matrices.h" />
+		<Unit filename="menu.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="menu.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
