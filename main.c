@@ -6,6 +6,7 @@
 #include "fechas.h"
 #include "matrices.h"
 #include "arreglos.h"
+#include "menu.h"
 
 //Tp Programacion
 

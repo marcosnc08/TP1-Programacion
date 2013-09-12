@@ -54,7 +54,7 @@
 	<conio.h>
 	<string.h>
 
-1378949699 source:c:\users\marcos.marcos-pc\documents\github\tp1-programacion\menu.c
+1378949957 source:c:\users\marcos.marcos-pc\documents\github\tp1-programacion\menu.c
 	<stdio.h>
 	<stdlib.h>
 	<conio.h>
@@ -62,14 +62,14 @@
 	<ctype.h>
 	"menu.h"
 
-1378949744 source:c:\users\marcos.marcos-pc\documents\github\tp1-programacion\arreglos.c
+1378951256 source:c:\users\marcos.marcos-pc\documents\github\tp1-programacion\arreglos.c
 	<stdio.h>
 	<stdlib.h>
 	<conio.h>
 	<string.h>
 	"arreglos.h"
 
-1378949307 source:c:\users\marcos.marcos-pc\documents\github\tp1-programacion\main.c
+1378951283 source:c:\users\marcos.marcos-pc\documents\github\tp1-programacion\main.c
 	<stdio.h>
 	<stdlib.h>
 	<conio.h>
@@ -78,12 +78,13 @@
 	"fechas.h"
 	"matrices.h"
 	"arreglos.h"
+	"menu.h"
 
 1378923801 c:\users\marcos.marcos-pc\documents\github\tp1-programacion\fechas.h
 
 1378925217 c:\users\marcos.marcos-pc\documents\github\tp1-programacion\matrices.h
 
-1378949541 c:\users\marcos.marcos-pc\documents\github\tp1-programacion\arreglos.h
+1378951403 c:\users\marcos.marcos-pc\documents\github\tp1-programacion\arreglos.h
 
 1378922123 c:\users\marcos.marcos-pc\documents\github\tp1-programacion\menu.h
 

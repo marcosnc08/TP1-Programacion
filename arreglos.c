@@ -3,6 +3,7 @@
 #include <conio.h>
 #include <string.h>
 #include "arreglos.h"
+#include "menu.h"
 #define MAX 100
 
 void arreglos(void)
@@ -14,6 +15,7 @@ void arreglos(void)
     int cadena[MAX];
     int numero2;
     int posicion;
+    int cant;
     do
         {
             opc = menu(mopcarr, "Ejercicios de Arreglos \n");
@@ -27,19 +29,56 @@ void arreglos(void)
                     getch();
                 break;
                 case 'E':
-                    printf("que posicion desea eliminar?");
+                    cant = cargar_vector(cadena);
+                    mostrar_vector(cadena, cant);
+                    printf("\nque posicion desea eliminar?");
                     scanf("%d", &posicion);
-                    eliminarelemento(cadena, posicion);
-                    printf("Posicion eliminada.");
+                    eliminarelemento(cadena, posicion, cant);
+                    cant--;
+                    printf("Posicion eliminada.\n\n");
+                    printf("El resultado del vector es: \n");
+                    mostrar_vector(cadena, cant);
                     getch();
                 break;
             }
         }while(opc!='Q');
 }
 
-void eliminarelemento (int cadena[], int posicion)
+int cargar_vector (int cadena[])
 {
-    cadena[posicion] = -24;
+    int cant = 0;
+    char salida;
+    do
+    {
+        printf("\nIngrese valor para la posicion %d: ", cant);
+        scanf("%d", &cadena[cant]);
+        cant++;
+        printf("Desea ingresar otro valor? (S/N): ");
+        fflush(stdin);
+        scanf("%c", &salida);
+        toupper(salida);
+    }while(salida != 'N');
+
+    return cant;
+}
+
+void mostrar_vector (int cadena[], int cant)
+{
+    int i;
+    printf("\n\n");
+    for(i=0; i<cant; i++)
+    {
+        printf("%d, ", cadena[i]);
+    }
+}
+void eliminarelemento (int cadena[], int posicion, int cant)
+{
+    int i;
+    for(i = 0; i <= (cant - posicion); i++)
+    {
+        cadena[posicion] = cadena[posicion + 1];
+        posicion ++;
+    }
 }
 
 int insertarelemento (int cadena[], int posicion, int elemento)
