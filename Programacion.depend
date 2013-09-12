@@ -1,0 +1,35 @@
+# depslib dependency file v1.0
+1378925217 source:c:\users\user\desktop\programacion\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	"matematica.h"
+	"fechas.h"
+	"matrices.h"
+
+1378923198 c:\users\user\desktop\programacion\matematica.h
+
+1378923261 source:c:\users\user\desktop\programacion\matematica.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	"matematica.h"
+
+1378922123 source:c:\users\user\desktop\programacion\menu.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+
+1378925217 source:c:\users\user\desktop\programacion\fechas.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+
+1378923801 c:\users\user\desktop\programacion\fechas.h
+
+1378925217 c:\users\user\desktop\programacion\matrices.h
+
