@@ -33,11 +33,14 @@
 
 1378925217 c:\users\user\desktop\programacion\matrices.h
 
-1378925217 source:c:\users\marcos.marcos-pc\documents\github\tp1-programacion\fechas.c
+1378991823 source:c:\users\marcos.marcos-pc\documents\github\tp1-programacion\fechas.c
 	<stdio.h>
 	<stdlib.h>
 	<conio.h>
 	<string.h>
+	<ctype.h>
+	"menu.h"
+	"fechas.h"
 
 1378923261 source:c:\users\marcos.marcos-pc\documents\github\tp1-programacion\matematica.c
 	<stdio.h>
@@ -62,12 +65,13 @@
 	<ctype.h>
 	"menu.h"
 
-1378951256 source:c:\users\marcos.marcos-pc\documents\github\tp1-programacion\arreglos.c
+1378952335 source:c:\users\marcos.marcos-pc\documents\github\tp1-programacion\arreglos.c
 	<stdio.h>
 	<stdlib.h>
 	<conio.h>
 	<string.h>
 	"arreglos.h"
+	"menu.h"
 
 1378951283 source:c:\users\marcos.marcos-pc\documents\github\tp1-programacion\main.c
 	<stdio.h>
@@ -80,7 +84,7 @@
 	"arreglos.h"
 	"menu.h"
 
-1378923801 c:\users\marcos.marcos-pc\documents\github\tp1-programacion\fechas.h
+1378991868 c:\users\marcos.marcos-pc\documents\github\tp1-programacion\fechas.h
 
 1378925217 c:\users\marcos.marcos-pc\documents\github\tp1-programacion\matrices.h
 

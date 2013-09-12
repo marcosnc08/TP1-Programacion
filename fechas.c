@@ -2,13 +2,16 @@
 #include <stdlib.h>
 #include <conio.h>
 #include <string.h>
+#include <ctype.h>
+#include "menu.h"
+#include "fechas.h"
 
 
 void fechas(void)
 {
-    char mopcfecha[][30] = {"VQ","Validar","Salir"};
+    char mopcfecha[][30] = {"VSQ","Validar","Sumar","Salir"};
     char opcfecha;
-    int di,me,an;
+    int di,me,an,n;
 
     do
         {
@@ -17,32 +20,49 @@ void fechas(void)
                    {
 
                     case 'V':
-                                        printf("\nIngrese dia: ");
-                                        fflush(stdin);
-                                        scanf("%d",&di);
-                                        printf("\nIngrese mes: ");
-                                        fflush(stdin);
-                                        scanf("%d",&me);
-                                        printf("\nIngrese anio: ");
-                                        fflush(stdin);
-                                        scanf("%d",&an);
-                                        if(fechavalida(di,me,an)!=0)
-                                        {
-                                            printf("La fecha ingresada es valida\n");
-                                        }else
-                                            printf("La fecha ingresada es invalida\n");
-                                            puts("Presione ENTER para continuar");
-                                            getch();
+                        printf("\nIngrese dia: ");
+                        fflush(stdin);
+                        scanf("%d",&di);
+                        printf("\nIngrese mes: ");
+                        fflush(stdin);
+                        scanf("%d",&me);
+                        printf("\nIngrese anio: ");
+                        fflush(stdin);
+                        scanf("%d",&an);
+                        if(fechavalida(di,me,an)!=0)
+                        {
+                            printf("La fecha ingresada es valida\n");
+                        }
+                        else
+                            printf("La fecha ingresada es invalida\n");
+                            puts("Presione ENTER para continuar");
+                            getch();
+                    break;
+                    case 'S':
+                        printf("\nIngrese dia: ");
+                        fflush(stdin);
+                        scanf("%d",&di);
+                        printf("\nIngrese mes: ");
+                        fflush(stdin);
+                        scanf("%d",&me);
+                        printf("\nIngrese anio: ");
+                        fflush(stdin);
+                        scanf("%d",&an);
+                        if(fechavalida(di,me,an))
+                        {
+                            printf("\nIngrese n (dias a sumar): ");
+                            fflush(stdin);
+                            scanf("%d",&n);
+                            sumar_n_dias(di,me,an,n);
+                        }
+                        else
+                            printf("Fecha no valida !!");
 
-                    case 'R':
-                        //ACA VA LA FUNCION DE FECHA QUE FALTA !!!!!
+                        getch();
                         break;
 
                    }
         }while(opcfecha!='Q');
-            return 0;
-
-
 }
 
 int fechavalida(int x,int y,int z)
@@ -63,7 +83,7 @@ int fechavalida(int x,int y,int z)
                                                     } else
                                                         if(y==02)
                                                         {
-                                                            if(z%4==0 && z%400==0 && z%100!=0)
+                                                            if((z%4==0 && z%100!=0) || z%400==0)//Mirar esto que lo cambie
                                                                 {
                                                                     if(x<=29)
                                                                     {
@@ -79,6 +99,59 @@ int fechavalida(int x,int y,int z)
 
 
                     }else return 0;
+}
+
+void sumar_n_dias (int dia, int mes, int ano, int n)
+{
+    dia += n;
+    while(dia > 28)
+    {
+        if(mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12)
+        {
+            if(dia > 31)
+            {
+                dia -= 31;
+                mes++;
+            }
+        }
+        else
+        {
+            if(mes == 4 || mes == 6 || mes == 9 || mes == 11)
+            {
+                if(dia >30)
+                {
+                    dia -= 30;
+                    mes++;
+                }
+            }
+            else
+            {
+                if((ano % 4 == 0 && ano % 100 != 0) || ano % 400 == 0)
+                {
+                    if(dia > 29)
+                    {
+                        dia -= 29;
+                        mes ++;
+                    }
+                }
+                else
+                {
+                    if(dia > 28)
+                    {
+                        dia -= 28;
+                        mes++;
+                    }
+                }
+            }
+        }
+    }
+    while(mes > 12)
+    {
+        ano++;
+        mes -= 12;
+    }
+
+    printf("El resultado es: %d/%d/%d", dia, mes, ano);
 }
 
 
