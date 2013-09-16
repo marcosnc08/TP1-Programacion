@@ -120,7 +120,7 @@ void sumar_n_dias (int dia, int mes, int ano, int n)
             }
         }
 
-    printf("El resultado es: %d/%d/%d", dia, mes, ano);
+        printf("El resultado es: %d/%d/%d", dia, mes, ano);
 }
 
 // Funciones de los menu.
