@@ -67,53 +67,58 @@ int fechavalida(int x,int y,int z)
 
 void sumar_n_dias (int dia, int mes, int ano, int n)
 {
-    dia += n;
-    while(dia > 28)
-    {
-        if(mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12)
+        dia += n;
+        while(dia > 28)
         {
-            if(dia > 31)
+            if(mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12)
             {
-                dia -= 31;
-                mes++;
-            }
-        }
-        else
-        {
-            if(mes == 4 || mes == 6 || mes == 9 || mes == 11)
-            {
-                if(dia >30)
+                if(dia > 31)
                 {
-                    dia -= 30;
+                    dia -= 31;
                     mes++;
                 }
             }
             else
             {
-                if((ano % 4 == 0 && ano % 100 != 0) || ano % 400 == 0)
+                if(mes == 4 || mes == 6 || mes == 9 || mes == 11)
                 {
-                    if(dia > 29)
+                    if(dia > 30)
                     {
-                        dia -= 29;
-                        mes ++;
+                        dia -= 30;
+                        mes++;
                     }
                 }
                 else
                 {
-                    if(dia > 28)
+                    if(mes == 2)
                     {
-                        dia -= 28;
-                        mes++;
+                        if((ano % 4 == 0 && ano % 100 != 0) || ano % 400 == 0)
+                        {
+                            if(dia > 29)
+                            {
+                                dia -= 29;
+                                mes ++;
+                            }
+                        }
+                        else
+                        {
+                            if(dia > 28)
+                            {
+                                dia -= 28;
+                                mes++;
+                            }
+                        }
                     }
                 }
+
+            }
+
+            if(mes > 12)
+            {
+                mes -= 12;
+                ano++;
             }
         }
-    }
-    while(mes > 12)
-    {
-        ano++;
-        mes -= 12;
-    }
 
     printf("El resultado es: %d/%d/%d", dia, mes, ano);
 }

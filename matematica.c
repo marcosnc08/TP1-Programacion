@@ -3,32 +3,26 @@
 #include <conio.h>
 #include <string.h>
 #include "matematica.h"
+#include "menu.h"
 
 void matematica(void)
 {
     char mopcmat[][30] = {"FCQ","Factorial","Combinatorio","Salir" };
     char opcmat;
-    int Factoriala;
-    int numero;
+
     do
         {
             opcmat = menu(mopcmat, "Operaciones matematicas \n");
             switch(opcmat)
             {
                 case 'F':
-                    printf("Ingrese un Numero Natural:\n\n");
-                    scanf("%d", &numero);
-
-                    printf("\nEl resultado es \"%d\" \n",Factorial(numero));
-                    puts("Presione ENTER para continuar");
-                    getch();
-                        break;
+                        opcion_factorial();
+                    break;
                 case 'C':
-                    combinatorio();
+                        combinatorio();
                     break;
             }
         }while(opcmat!='Q');
-            return 0;
 }
 
 
@@ -67,13 +61,28 @@ void combinatorio(void)
             scanf("%d",&n);
         } while(m < n || n < 0);
 
-                dividendo = Factorial(m);
-                resta=(m-n);
-                divisor = Factorial(n) * Factorial(resta);
+    dividendo = Factorial(m);
+    resta=(m-n);
+    divisor = Factorial(n) * Factorial(resta);
 
-                NumeroCombinatorio = dividendo / divisor;
+    NumeroCombinatorio = dividendo / divisor;
 
-                printf("\nEl numero combinatorio es: %li\n", NumeroCombinatorio);
-                puts("presione ENTER para continuar");
-                getch();
+    printf("\nEl numero combinatorio es: %li\n", NumeroCombinatorio);
+    puts("presione ENTER para continuar");
+    getch();
 }
+
+// Funciones de los menu.
+
+void opcion_factorial()
+{
+    int numero;
+
+    printf("Ingrese un Numero Natural:\n\n");
+    scanf("%d", &numero);
+
+    printf("\nEl resultado es \"%d\" \n",Factorial(numero));
+    puts("Presione ENTER para continuar");
+    getch();
+}
+

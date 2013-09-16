@@ -22,8 +22,8 @@ void matrices(void)
                 simetrica();
                 break;
             }
+            getch();
         }while(opcmatriz!='Q');
-        return 0;
 }
 
 
@@ -91,12 +91,15 @@ void simetrica(void)
     cargar_matriz(matriz,m);
 
     while(i<m)
-        {if (matriz[i][j]=matriz[j][i])
-            {printf("Es simetrica");
+    {
+        if (matriz[i][j]=matriz[j][i])
+        {
+            printf("Es simetrica");
             i++;
             j++;
-            }else
-                printf("No es simetrica");
-        };
+        }
+        else
+            printf("No es simetrica");
+    }
 
 }

@@ -5,4 +5,6 @@ int Factorial(int);
 void matematica(void);
 void combinatorio(void);
 
+void opcion_factorial();
+
 #endif // MATEMATICA_H_INCLUDED
