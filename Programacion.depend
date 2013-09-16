@@ -33,7 +33,7 @@
 
 1378925217 c:\users\user\desktop\programacion\matrices.h
 
-1378992530 source:c:\users\marcos.marcos-pc\documents\github\tp1-programacion\fechas.c
+1379353648 source:c:\users\marcos.marcos-pc\documents\github\tp1-programacion\fechas.c
 	<stdio.h>
 	<stdlib.h>
 	<conio.h>
@@ -42,16 +42,17 @@
 	"menu.h"
 	"fechas.h"
 
-1378923261 source:c:\users\marcos.marcos-pc\documents\github\tp1-programacion\matematica.c
+1379354097 source:c:\users\marcos.marcos-pc\documents\github\tp1-programacion\matematica.c
 	<stdio.h>
 	<stdlib.h>
 	<conio.h>
 	<string.h>
 	"matematica.h"
+	"menu.h"
 
-1378923198 c:\users\marcos.marcos-pc\documents\github\tp1-programacion\matematica.h
+1379353877 c:\users\marcos.marcos-pc\documents\github\tp1-programacion\matematica.h
 
-1378925520 source:c:\users\marcos.marcos-pc\documents\github\tp1-programacion\matrices.c
+1379354664 source:c:\users\marcos.marcos-pc\documents\github\tp1-programacion\matrices.c
 	<stdio.h>
 	<stdlib.h>
 	<conio.h>
@@ -65,7 +66,7 @@
 	<ctype.h>
 	"menu.h"
 
-1378952335 source:c:\users\marcos.marcos-pc\documents\github\tp1-programacion\arreglos.c
+1379353278 source:c:\users\marcos.marcos-pc\documents\github\tp1-programacion\arreglos.c
 	<stdio.h>
 	<stdlib.h>
 	<conio.h>
@@ -84,11 +85,11 @@
 	"arreglos.h"
 	"menu.h"
 
-1378991868 c:\users\marcos.marcos-pc\documents\github\tp1-programacion\fechas.h
+1379353541 c:\users\marcos.marcos-pc\documents\github\tp1-programacion\fechas.h
 
 1378925217 c:\users\marcos.marcos-pc\documents\github\tp1-programacion\matrices.h
 
-1378951403 c:\users\marcos.marcos-pc\documents\github\tp1-programacion\arreglos.h
+1379353153 c:\users\marcos.marcos-pc\documents\github\tp1-programacion\arreglos.h
 
 1378922123 c:\users\marcos.marcos-pc\documents\github\tp1-programacion\menu.h
 

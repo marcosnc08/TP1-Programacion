@@ -11,7 +11,6 @@ void fechas(void)
 {
     char mopcfecha[][30] = {"VSQ","Validar","Sumar","Salir"};
     char opcfecha;
-    int di,me,an,n;
 
     do
         {
@@ -20,46 +19,11 @@ void fechas(void)
                    {
 
                     case 'V':
-                        printf("\nIngrese dia: ");
-                        fflush(stdin);
-                        scanf("%d",&di);
-                        printf("\nIngrese mes: ");
-                        fflush(stdin);
-                        scanf("%d",&me);
-                        printf("\nIngrese anio: ");
-                        fflush(stdin);
-                        scanf("%d",&an);
-                        if(fechavalida(di,me,an)!=0)
-                        {
-                            printf("La fecha ingresada es valida\n");
-                        }
-                        else
-                            printf("La fecha ingresada es invalida\n");
-                            puts("Presione ENTER para continuar");
-                            getch();
+                        opcion_validar_fecha();
                     break;
                     case 'S':
-                        printf("\nIngrese dia: ");
-                        fflush(stdin);
-                        scanf("%d",&di);
-                        printf("\nIngrese mes: ");
-                        fflush(stdin);
-                        scanf("%d",&me);
-                        printf("\nIngrese anio: ");
-                        fflush(stdin);
-                        scanf("%d",&an);
-                        if(fechavalida(di,me,an))
-                        {
-                            printf("\nIngrese n (dias a sumar): ");
-                            fflush(stdin);
-                            scanf("%d",&n);
-                            sumar_n_dias(di,me,an,n);
-                        }
-                        else
-                            printf("Fecha no valida !!");
-
-                        getch();
-                        break;
+                        opcion_sumar_n_dias();
+                    break;
 
                    }
         }while(opcfecha!='Q');
@@ -152,6 +116,55 @@ void sumar_n_dias (int dia, int mes, int ano, int n)
     }
 
     printf("El resultado es: %d/%d/%d", dia, mes, ano);
+}
+
+// Funciones de los menu.
+
+void opcion_validar_fecha()
+{
+    int di,me,an;
+
+    printf("\nIngrese dia: ");
+    fflush(stdin);
+    scanf("%d",&di);
+    printf("\nIngrese mes: ");
+    fflush(stdin);
+    scanf("%d",&me);
+    printf("\nIngrese anio: ");
+    fflush(stdin);
+    scanf("%d",&an);
+    if(fechavalida(di,me,an)!=0)
+        printf("La fecha ingresada es valida\n");
+    else
+        printf("La fecha ingresada es invalida\n");
+
+    puts("Presione ENTER para continuar");
+    getch();
+}
+
+void opcion_sumar_n_dias()
+{
+    int di,me,an,n;
+    printf("\nIngrese dia: ");
+    fflush(stdin);
+    scanf("%d",&di);
+    printf("\nIngrese mes: ");
+    fflush(stdin);
+    scanf("%d",&me);
+    printf("\nIngrese anio: ");
+    fflush(stdin);
+    scanf("%d",&an);
+    if(fechavalida(di,me,an))
+    {
+        printf("\nIngrese n (dias a sumar): ");
+        fflush(stdin);
+        scanf("%d",&n);
+        sumar_n_dias(di,me,an,n);
+    }
+    else
+        printf("Fecha no valida !!");
+
+    getch();
 }
 
 
