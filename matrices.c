@@ -81,25 +81,35 @@ void mostrar_matriz(int mat[][100],int m)
 }
 void simetrica(void)
 {
-    int matriz[100][100];
-    int i,j,dato;
-    int m;
-    i=0;
-    j=0;
-    printf("Ingrese numero de columnas/filas: ");
-    scanf("%d",&m);
-    cargar_matriz(matriz,m);
+int matriz[100][100];
+int i,j;
+int m;
+i=1;
+j=0;
 
-    while(i<m)
-    {
-        if (matriz[i][j]=matriz[j][i])
-        {
-            printf("Es simetrica");
-            i++;
-            j++;
-        }
-        else
-            printf("No es simetrica");
-    }
+printf("Ingrese numero de columnas/filas: ");
+scanf("%d",&m);
+cargar_matriz(matriz,m);
 
+while(j<m)
+{
+while(i<m)
+{
+if(matriz[i][j]==matriz[j][i])
+{
+i++;
+}else
+j=m+1;
+i=m+1;
+
+}
+j++;
+i=0;
+}
+
+if(j==m)
+printf("\n ES SIMETRICA");
+else
+printf("\n NO ES SIMETRICA");
+getch();
 }
